@@ -1,3 +1,4 @@
+/* Adicione estilos básicos para os quadrados e pares */
 body, html {
     margin: 0;
     padding: 0;
@@ -11,17 +12,17 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 28.3%;
+    height: 28%;
     text-align: center;
     background-color: #ffffff;
 }
 
 .logo img {
     max-width: 100%;
-    width:410px;
+    width: 400px;
     height: auto;
-    margin: 40px;
-    }
+    margin: 35px;
+}
 
 .logo.center {
     text-align: center;
@@ -37,14 +38,16 @@ body, html {
 }
 
 .interactive-image {
-    width: 180px;
-    height: 180px;
-    margin: 0 12px 24px 0;
+    position: relative; 
+    width: 170px;
+    height: 170px;
+    margin: 0 12px 36px 0;
     cursor: pointer;
     overflow: hidden;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
+    overflow: hidden;
 }
 
 .interactive-image img {
@@ -52,19 +55,34 @@ body, html {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    transition: transform 400ms;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+.interactive-image:hover img {
+    transform: scale(1.2);
+    transition: transform 400ms;
 }
 
 .interactive-image p {
-    margin: 0;  
-    font-size: 12px; 
+    position: absolute; 
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 12px;
+    z-index: 1;
 }
-
 
 footer {
     text-align: center;
-    padding: 3px;
-    background-color: #333;
-    color: #fff;
-    font-size: 90%;
-    margin-top: auto;
+    padding: 10px; 
+    background-color: #333; 
+    color: #fff; 
+    font-size: 16px; 
+    font-weight:700; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
