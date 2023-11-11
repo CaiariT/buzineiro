@@ -4,7 +4,7 @@ body, html {
     height: 100%;
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column; /* Organiza os elementos verticalmente */
+    flex-direction: column;
 }
 
 .header {
@@ -14,10 +14,6 @@ body, html {
     height: 28.3%;
     text-align: center;
     background-color: #ffffff;
-}
-
-.logo {
-    flex: 1;
 }
 
 .logo img {
@@ -38,16 +34,29 @@ body, html {
     flex-grow: 1;
 }
 
-.box {
+.interactive-image {
     width: 180px;
     height: 180px;
-    margin-bottom: 24px; 
-    box-sizing: border-box;
-    background-color: #87CEEB;
-    padding: 12px;
+    margin: 0 12px 24px 0;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     text-align: center;
-    margin-right: 20px; 
 }
+
+.interactive-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.interactive-image p {
+    margin: 0;  
+    font-size: 12px; 
+}
+
 
 footer {
     text-align: center;
@@ -55,5 +64,5 @@ footer {
     background-color: #333;
     color: #fff;
     font-size: 90%;
-    margin-top: auto; /* Empurra o footer para a parte inferior */
+    margin-top: auto;
 }
