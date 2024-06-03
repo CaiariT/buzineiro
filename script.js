@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 buzina.volume = volumeSlider.value;
                 buzina.play();
                 console.log(`Buzina Clicada: ${name}`);
-
+                //tempo que a buzina fica ativa
                 setTimeout(function () {
                     isButtonDisabled = false;
                 }, 1000);
